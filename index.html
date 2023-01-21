@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            background-color: lemonchiffon;
+            text-align: center;
+            margin:10px 30px 10px 30px;
+        }
+        form{
+            padding:15px;
+        }
+        p{
+            font-weight:bold;
+        }
+        label{
+            font-size:200;
+        }
+        #btn{
+            background-color: black;
+            color:white;
+            border-radius: 5px;
+        }
+        .delete{
+            background-color: red;
+            color:white;
+            border:1px solid;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+    <form id="form">
+        <label for="price">Choose Price:</label>
+        <input type="text" id="price"><br><br>
+        <label for="dish">Choose Dish:</label>
+        <input type="text" id="dish"><br><br>
+        <label for="table">Choose a Table</label>
+        <select id="table">
+            <option>Table 1</option>
+            <option>Table 2</option>
+            <option>Table 3</option>
+        </select><br><br>
+        <button id="btn" onclick="saveToStorage(event)">Add Bill</button><br>
+    </form>
+</section>
+    <h1>Orders</h1>
+    <p>Table 1</p>
+    <ul id="table1Orders"></ul>
+    <p>Table 2</p>
+    <ul id="table2Orders"></ul>
+    <p>Table 3</p>
+    <ul id="table3Orders"></ul>
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+</body>
+</html>
